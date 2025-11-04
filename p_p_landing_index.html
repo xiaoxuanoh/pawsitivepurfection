@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pawsitive & Purrfection</title>
+  <meta name="description" content="P&P – Take better care of your friends. 3‑click global pet mall, 5‑day door‑to‑door, zero fake." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff;
+      --text:#222;
+      --muted:#6b6b6b;
+      --brand:#ff8a3d; /* orange CTA */
+      --brown:#bb8441; /* section band color from PNG */
+      --shadow:0 10px 30px rgba(0,0,0,.15);
+      --radius:22px;
+      --max:1200px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; color:var(--text); background:var(--bg)}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin-inline:auto; padding:0 24px}
+
+    /* NAV */
+    header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.8); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid rgba(0,0,0,.06)}
+    .nav{display:flex; align-items:center; gap:18px; height:64px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800}
+    .logo-badge{width:44px; height:44px; border-radius:14px; background:linear-gradient(135deg,#ffd77a,#c7862a); display:grid; place-items:center; color:#23180a; font-weight:900; box-shadow:var(--shadow)}
+    nav a{font-weight:600; margin-right:18px; color:#2e2e2e}
+    nav a:hover{opacity:.8}
+    .spacer{flex:1}
+    .btn{display:inline-flex; align-items:center; gap:8px; background:var(--brand); color:#fff; border-radius:999px; padding:12px 18px; font-weight:800; box-shadow:var(--shadow)}
+
+    /* HERO A (PNG #4) */
+    .hero{position:relative; background:url('assets/hero-main.jpg') center/cover no-repeat; min-height:80vh; display:flex; align-items:center}
+    .hero::after{content:""; position:absolute; inset:auto 0 0 0; height:120px; background:radial-gradient(160% 120px at 50% -20px, #fff 60%, transparent 61%)} /* white wave */
+    .hero-inner{position:relative; z-index:2; padding:32px 0}
+    .hero h1{font-size:clamp(36px,6vw,64px); line-height:1.05; margin:0 0 10px; font-weight:800; color:#2b1f14; text-shadow:0 4px 30px rgba(0,0,0,.35)}
+    .hero p{font-size:clamp(16px,2.4vw,22px); color:#2b1f14; max-width:25ch; font-weight:600; opacity:.9}
+    .cta{margin-top:18px}
+    .cta .btn{font-size:18px; padding:14px 22px}
+    .ai-badge{position:absolute; right:40px; top:90px; width:120px; background:#fff; border-radius:30px; padding:14px; text-align:center; box-shadow:var(--shadow)}
+    .ai-badge .big{font-weight:800; color:#f6842c; font-size:22px;}
+
+    /* NEW ARRIVALS row (from PNG #4) */
+    .arrivals{padding:24px 0 34px}
+    .arrivals h3{letter-spacing:2px; color:#f1a02b; text-transform:uppercase; margin:0 0 12px}
+    .chips{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(140px,1fr); gap:22px; overflow:auto; padding-bottom:6px}
+    .chip{aspect-ratio:1; border-radius:999px; background:#f4f4f4; box-shadow:var(--shadow); overflow:hidden}
+    .chip img{width:100%; height:100%; object-fit:cover}
+
+    /* SECTION B – collage & three columns (from PNG #1) */
+    .collage{background:#fff; padding:0}
+    .collage img{display:block; width:100%; height:auto}
+    .band{background:var(--brown); color:#fff; padding:40px 0}
+    .cols{display:grid; grid-template-columns:repeat(3,1fr); gap:40px}
+    .col h4{margin:.2rem 0 1rem; font-size:18px; letter-spacing:.7px}
+    .col ul{margin:0; padding-left:18px}
+    .promo{grid-column:1/-1; text-align:center; font-weight:800; font-size:clamp(18px,2.5vw,28px); margin-top:6px}
+
+    /* SECTION C – About (PNG #2) */
+    .about{background:linear-gradient(180deg,#f7c16a,#efb05c); padding:50px 0}
+    .about-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:start}
+    .card{background:#ffe9c9; border-radius:34px; padding:24px; box-shadow:var(--shadow)}
+    .card h3{margin-top:0; color:#d16400}
+    .bubble{background:#ffe7c6; border-radius:34px; padding:22px}
+    .about-illus{max-width:100%}
+
+    /* SECTION D – Full banner (PNG #3) */
+    .banner{position:relative; background:url('assets/dogs-walking.jpg') center/cover no-repeat; min-height:60vh; display:flex; align-items:center}
+    .banner h2{font-family:'Dancing Script',cursive; font-size:clamp(42px,8vw,110px); color:#fff; font-weight:700; line-height:1; margin:0 0 10px; text-shadow:0 8px 30px rgba(0,0,0,.6)}
+    .banner p{color:#fff; font-size:clamp(16px,2.2vw,28px); text-shadow:0 8px 30px rgba(0,0,0,.6)}
+
+    /* Footer */
+    footer{padding:40px 24px; background:#fff; color:#7b7b7b; border-top:1px solid rgba(0,0,0,.08)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .about-grid{grid-template-columns:1fr}
+      .cols{grid-template-columns:1fr}
+      .ai-badge{display:none}
+      .chips{grid-auto-columns:minmax(120px,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="container nav">
+      <div class="logo"><div class="logo-badge">P&P</div><span>Pawsitive &amp; Purrfection</span></div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#service">Service</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="spacer"></div>
+      <a class="btn" href="#signin">Sign in</a>
+    </div>
+  </header>
+
+  <!-- HERO A (PNG #4) -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h1>Take Better Care<br/>of Your friends</h1>
+      <p>3‑click global pet mall.</p>
+      <p>5‑day door‑to‑door, zero fake.</p>
+      <div class="cta"><a class="btn" href="#get-started">Get started</a></div>
+    </div>
+    <div class="ai-badge"><div class="big">24/7</div><div>AI customer<br/>service</div></div>
+  </section>
+
+  <!-- New arrivals row (thumbnails) -->
+  <section class="container arrivals">
+    <h3>New Arrivals!!!</h3>
+    <div class="chips">
+      <div class="chip"><img src="assets/item-1.jpg" alt="Item 1"></div>
+      <div class="chip"><img src="assets/item-2.jpg" alt="Item 2"></div>
+      <div class="chip"><img src="assets/item-3.jpg" alt="Item 3"></div>
+      <div class="chip"><img src="assets/item-4.jpg" alt="Item 4"></div>
+      <div class="chip"><img src="assets/item-5.jpg" alt="Item 5"></div>
+      <div class="chip"><img src="assets/item-6.jpg" alt="Item 6"></div>
+    </div>
+  </section>
+
+  <!-- Collage & three columns (PNG #1) -->
+  <section class="collage">
+    <img src="assets/collage-title.jpg" alt="Pawsitive & Purrfection collage" />
+    <div class="band">
+      <div class="container cols">
+        <div class="col">
+          <h4>SERVICE INDUSTRY</h4>
+          <ul>
+            <li>Covering more than 100 countries</li>
+            <li>More than 1000 tourists</li>
+            <li>9200 international brands</li>
+            <li>20,000+ real reviews</li>
+            <li>300 guide downloads</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>COOPERATIVE BRAND</h4>
+          <ul>
+            <li>Pet supplies</li>
+            <li>Pets At Home</li>
+            <li>Chew</li>
+            <li>Booqi</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>ABOUT US</h4>
+          <ul>
+            <li>Our service</li>
+            <li>Privacy Policy</li>
+            <li>Service Agreement</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="promo">Join the P&P now—get ¥80 freight credit + automatic AI feeding schedule for free !!!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About section (PNG #2) -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div>
+        <img class="about-illus" src="assets/about-animals.png" alt="Cute animals illustration" />
+        <div class="card">
+          <h3>About Us</h3>
+          <div class="bubble">
+            <p><strong>Global pet parents face a “double glass wall”:</strong></p>
+            <ol>
+              <li>Chinese exclusives (smart feeders, thermal jackets, budget smart litter boxes) can’t be shipped out;</li>
+              <li>Overseas‑only special diets, wild Alaskan salmon oil or EU‑approved dewormers never reach Chinese living rooms;</li>
+              <li>Add busy schedules + scary fake‑goods stories → cross‑border shopping is stuck.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="bubble" style="background:#ffe9c9">
+            <p><strong>Audience – First 100 Users</strong></p>
+            <p>30–45 y/o Chinese expats/foreign professionals in SG, US, AU who own cats/dogs and already shop on Chewy / Taobao agents.</p>
+            <p>Tier‑1 Chinese DINK couples spending ≥¥1,500/month on imported pet meds. → Both groups Google in English & Chinese and crave one‑cart checkout with real‑time customs‑tax view.</p>
+          </div>
+        </div>
+        <img class="about-illus" src="assets/shopping-cart-dog.png" alt="Dog shopping cart illustration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Full banner (PNG #3) -->
+  <section class="banner">
+    <div class="container">
+      <h2>For better experience</h2>
+      <p>3‑click global pet mall, <br/>5‑day door‑to‑door, zero fake</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="y"></span> Pawsitive &amp; Purrfection. All rights reserved.</small>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
