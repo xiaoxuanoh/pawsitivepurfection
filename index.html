@@ -115,7 +115,7 @@
     /* ---------- PANEL 1: HERO ---------- */
     .hero{
       position:relative;
-      background:url('assets/images/panel 1/panel_1-bg.jpg') center/cover no-repeat;
+      background:url('./assets/images/panel 1/panel_1-bg.jpg') center/cover no-repeat;
       min-height:86vh;
       display:flex;
       align-items:flex-start;
@@ -207,7 +207,7 @@
       display:block;
     }
 
-    /* ---------- NEW ARRIVALS (inside panel 1) ---------- */
+    /* ---------- NEW ARRIVALS ---------- */
     .arrivals{
       max-width:var(--max);
       margin:0 auto;
@@ -237,17 +237,19 @@
       border-radius:999px;
       overflow:hidden;
       box-shadow:var(--shadow);
+      background:#fff;
     }
 
     .thumb img{
       width:100%;
       height:100%;
       object-fit:cover;
+      display:block;
     }
 
-    /* ---------- PANEL 2: ABOUT & AUDIENCE ---------- */
+    /* ---------- PANEL 2 ---------- */
     .panel2{
-      background:url('assets/images/panel 2/panel_2-bg.png') center/cover no-repeat;
+      background:url('./assets/images/panel 2/panel_2-bg.png') center/cover no-repeat;
       padding:40px 0 60px;
     }
 
@@ -304,10 +306,10 @@
       margin-left:auto;
     }
 
-    /* ---------- PANEL 3: FOR BETTER EXPERIENCE ---------- */
+    /* ---------- PANEL 3 ---------- */
     .panel3{
       position:relative;
-      background:url('assets/images/panel 3/panel_3-bg.png') center/cover no-repeat;
+      background:url('./assets/images/panel 3/panel_3-bg.png') center/cover no-repeat;
       min-height:70vh;
       color:#ffffff;
       display:flex;
@@ -342,7 +344,7 @@
       margin:0;
     }
 
-    /* ---------- PANEL 4: INFO BAND ---------- */
+    /* ---------- PANEL 4 ---------- */
     .panel4{
       background:#ffffff;
     }
@@ -396,24 +398,14 @@
       color:#fff7dc;
     }
 
-    /* ---------- SHARED DECORATIVE ELEMENTS ---------- */
+    /* ---------- SHARED DECOR ---------- */
     .paw{
       position:absolute;
       pointer-events:none;
       user-select:none;
     }
-
-    .paw-top-right{
-      width:80px;
-      top:18px;
-      right:18px;
-    }
-
-    .paw-bottom-left{
-      width:100px;
-      bottom:18px;
-      left:18px;
-    }
+    .paw-top-right{width:80px;top:18px;right:18px;}
+    .paw-bottom-left{width:100px;bottom:18px;left:18px;}
 
     .card-logo{
       width:72px;
@@ -423,16 +415,15 @@
       margin-bottom:8px;
     }
 
-    /* ---------- PANEL 5: SIGN UP ---------- */
+    /* ---------- PANEL 5 ---------- */
     .panel5{
       position:relative;
-      background:url('assets/images/panel 5/panel_5-bg.jpg') center/cover no-repeat;
+      background:url('./assets/images/panel 5/panel_5-bg.jpg') center/cover no-repeat;
       padding:80px 16px 100px;
       display:flex;
       justify-content:center;
       align-items:center;
     }
-
     .panel5::before{
       content:"";
       position:absolute;
@@ -440,7 +431,6 @@
       backdrop-filter:blur(3px);
       background:rgba(0,0,0,0.12);
     }
-
     .signup-card{
       position:relative;
       z-index:2;
@@ -454,7 +444,6 @@
       align-items:flex-start;
       gap:18px;
     }
-
     .signup-title{
       width:100%;
       text-align:center;
@@ -463,14 +452,12 @@
       margin:0 0 10px;
       color:#342015;
     }
-
     .signup-label{
       font-family:Poppins,sans-serif;
       font-size:22px;
       margin-top:6px;
       color:#342015;
     }
-
     .signup-input{
       width:100%;
       padding:16px 18px;
@@ -482,14 +469,11 @@
       color:#444;
       background:#ffffff;
     }
-
     .signup-input::placeholder{color:#d4d0c7;}
-
     .signup-input:focus{
       border-color:#ffb34d;
       box-shadow:0 0 0 3px rgba(255,179,77,0.25);
     }
-
     .signup-note{
       width:100%;
       text-align:center;
@@ -497,22 +481,20 @@
       font-family:Poppins,sans-serif;
       font-size:18px;
     }
-
     .signup-note a{
       font-weight:700;
       text-decoration:underline;
     }
 
-    /* ---------- PANEL 6: LOG IN ---------- */
+    /* ---------- PANEL 6 ---------- */
     .panel6{
       position:relative;
-      background:url('assets/images/panel 6/panel_6-bg.jpg') center/cover no-repeat;
+      background:url('./assets/images/panel 6/panel_6-bg.jpg') center/cover no-repeat;
       padding:80px 16px 100px;
       display:flex;
       justify-content:center;
       align-items:center;
     }
-
     .panel6::before{
       content:"";
       position:absolute;
@@ -520,7 +502,6 @@
       backdrop-filter:blur(3px);
       background:rgba(0,0,0,0.12);
     }
-
     .login-card{
       position:relative;
       z-index:2;
@@ -534,7 +515,6 @@
       align-items:flex-start;
       gap:22px;
     }
-
     .login-title{
       width:100%;
       text-align:center;
@@ -543,13 +523,11 @@
       margin:0 0 10px;
       color:#342015;
     }
-
     .login-label{
       font-family:Poppins,sans-serif;
       font-size:22px;
       color:#342015;
     }
-
     .login-input{
       width:100%;
       padding:16px 18px;
@@ -561,14 +539,11 @@
       color:#444;
       background:#ffffff;
     }
-
     .login-input::placeholder{color:#d4d0c7;}
-
     .login-input:focus{
       border-color:#ffb34d;
       box-shadow:0 0 0 3px rgba(255,179,77,0.25);
     }
-
     .login-note{
       width:100%;
       text-align:center;
@@ -576,22 +551,20 @@
       font-family:Poppins,sans-serif;
       font-size:18px;
     }
-
     .login-note a{
       font-weight:700;
       text-decoration:underline;
     }
 
-    /* ---------- PANEL 7: LANGUAGE ---------- */
+    /* ---------- PANEL 7 ---------- */
     .panel7{
       position:relative;
-      background:url('assets/images/panel 7/panel_7-bg.jpg') center/cover no-repeat;
+      background:url('./assets/images/panel 7/panel_7-bg.jpg') center/cover no-repeat;
       padding:80px 16px 100px;
       display:flex;
       justify-content:center;
       align-items:center;
     }
-
     .panel7::before{
       content:"";
       position:absolute;
@@ -599,7 +572,6 @@
       backdrop-filter:blur(3px);
       background:rgba(0,0,0,0.12);
     }
-
     .language-card{
       position:relative;
       z-index:2;
@@ -613,7 +585,6 @@
       gap:26px;
       align-items:flex-start;
     }
-
     .language-title{
       text-align:center;
       width:100%;
@@ -622,14 +593,12 @@
       margin:0 0 10px;
       color:#342015;
     }
-
     .language-options{
       display:flex;
       flex-direction:column;
       gap:28px;
       width:100%;
     }
-
     .language-option{
       background:var(--chip-bg);
       border-radius:40px;
@@ -642,7 +611,6 @@
       cursor:pointer;
       box-shadow:0 4px 8px rgba(0,0,0,.1);
     }
-
     .language-option img{
       width:56px;
       height:auto;
@@ -698,14 +666,13 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- HEADER -->
   <header>
     <div class="nav">
       <div class="logo">
-        <img src="assets/images/panel 1/logo.png" alt="P&P logo" class="logo-img" />
+        <img src="./assets/images/panel 1/logo.png" alt="P&P logo" class="logo-img" />
         <div class="logo-text">
           <div class="logo-line1">P&amp;P</div>
           <div class="logo-line2">Pawsitive &amp; Purrfection</div>
@@ -718,22 +685,22 @@
         <a href="#panel4">Contact</a>
       </nav>
       <div class="spacer"></div>
-      <img src="assets/images/panel 1/magnifying_glass.svg" class="nav-search" alt="Search" />
+      <img src="./assets/images/panel 1/magnifying_glass.svg" class="nav-search" alt="Search" />
       <a href="#login" class="signin">SIGN IN</a>
     </div>
   </header>
 
-  <!-- PANEL 1: HERO -->
+  <!-- PANEL 1 -->
   <section id="home" class="hero">
     <div class="hero-inner">
       <h1 class="hero-title">Take Better Care<br>of Your friends</h1>
       <div class="hero-cta">
-        <img src="assets/images/panel 1/brown_paw.svg" alt="" class="hero-paw" />
+        <img src="./assets/images/panel 1/brown_paw.svg" alt="" class="hero-paw" />
         <a href="#signup" class="btn-primary">Get started</a>
       </div>
     </div>
     <aside class="ai-badge">
-      <img src="assets/images/panel 1/customer_service.svg" alt="AI chatbot" class="ai-icon" />
+      <img src="./assets/images/panel 1/customer_service.svg" alt="AI chatbot" class="ai-icon" />
       <div class="big">24/7</div>
       <div>AI<br>customer<br>service</div>
     </aside>
@@ -744,23 +711,23 @@
     </div>
   </section>
 
-  <!-- NEW ARRIVALS (still visually part of panel 1) -->
+  <!-- NEW ARRIVALS -->
   <section class="arrivals">
     <h3 class="arrivals-title">NEW ARRIVALS!!!</h3>
     <div class="thumbs">
-      <div class="thumb"><img src="assets/images/panel 1/bubble1.png" alt="" /></div>
-      <div class="thumb"><img src="assets/images/panel 1/bubble2.png" alt="" /></div>
-      <div class="thumb"><img src="assets/images/panel 1/bubble3.png" alt="" /></div>
-      <div class="thumb"><img src="assets/images/panel 1/bubble5.png" alt="" /></div>
-      <div class="thumb"><img src="assets/images/panel 1/bubble6.png" alt="" /></div>
+      <div class="thumb"><img src="./assets/images/panel 1/bubble1.png" alt="" /></div>
+      <div class="thumb"><img src="./assets/images/panel 1/bubble2.png" alt="" /></div>
+      <div class="thumb"><img src="./assets/images/panel 1/bubble3.png" alt="" /></div>
+      <div class="thumb"><img src="./assets/images/panel 1/bubble5.png" alt="" /></div>
+      <div class="thumb"><img src="./assets/images/panel 1/bubble6.png" alt="" /></div>
     </div>
   </section>
 
-  <!-- PANEL 2: ABOUT & AUDIENCE -->
+  <!-- PANEL 2 -->
   <section id="about" class="panel2">
     <div class="panel2-wrap">
       <div>
-        <img src="assets/images/panel 2/3animals.png" alt="Three cartoon animals" class="panel2-pets" />
+        <img src="./assets/images/panel 2/3animals.png" alt="Three cartoon animals" class="panel2-pets" />
         <div class="panel2-card panel2-about">
           <h2>About Us</h2>
           <p><strong>Global pet parents face a “double glass wall”:</strong></p>
@@ -778,12 +745,12 @@
           <p>Tier-1 couples spending ≥ ¥1,500/month on imports.</p>
           <p>They browse in EN + CN and want one safe cart.</p>
         </div>
-        <img src="assets/images/panel 2/dog_cart.svg" alt="Dog with cart" class="panel2-cart" />
+        <img src="./assets/images/panel 2/dog_cart.svg" alt="Dog with cart" class="panel2-cart" />
       </div>
     </div>
   </section>
 
-  <!-- PANEL 3: FOR BETTER EXPERIENCE -->
+  <!-- PANEL 3 -->
   <section id="panel3" class="panel3">
     <div class="panel3-overlay"></div>
     <div class="panel3-inner">
@@ -795,9 +762,9 @@
     </div>
   </section>
 
-  <!-- PANEL 4: INFO BAND -->
+  <!-- PANEL 4 -->
   <section id="panel4" class="panel4">
-    <img src="assets/images/panel 4/animals.svg" alt="Row of pets" class="panel4-top" />
+    <img src="./assets/images/panel 4/animals.svg" alt="Row of pets" class="panel4-top" />
     <div class="panel4-band">
       <div class="panel4-inner">
         <div class="panel4-cols">
@@ -837,13 +804,12 @@
     </div>
   </section>
 
-  <!-- PANEL 5: SIGN UP -->
+  <!-- PANEL 5 -->
   <section id="signup" class="panel5">
     <div class="signup-card">
-      <img src="assets/images/panel 5/yellow_paw.svg" alt="" class="paw paw-top-right" />
-      <img src="assets/images/panel 5/yellow_paw.svg" alt="" class="paw paw-bottom-left" />
-
-      <img src="assets/images/panel 5/pnp logo copy.png" alt="P&P logo" class="card-logo" />
+      <img src="./assets/images/panel 5/yellow_paw.svg" alt="" class="paw paw-top-right" />
+      <img src="./assets/images/panel 5/yellow_paw.svg" alt="" class="paw paw-bottom-left" />
+      <img src="./assets/images/panel 5/pnp logo copy.png" alt="P&P logo" class="card-logo" />
 
       <h2 class="signup-title">Sign up</h2>
 
@@ -863,13 +829,12 @@
     </div>
   </section>
 
-  <!-- PANEL 6: LOG IN -->
+  <!-- PANEL 6 -->
   <section id="login" class="panel6">
     <div class="login-card">
-      <img src="assets/images/panel 6/yellow_paw.svg" alt="" class="paw paw-top-right" />
-      <img src="assets/images/panel 6/yellow_paw.svg" alt="" class="paw paw-bottom-left" />
-
-      <img src="assets/images/panel 6/pnp logo copy.png" alt="P&P logo" class="card-logo" />
+      <img src="./assets/images/panel 6/yellow_paw.svg" alt="" class="paw paw-top-right" />
+      <img src="./assets/images/panel 6/yellow_paw.svg" alt="" class="paw paw-bottom-left" />
+      <img src="./assets/images/panel 6/pnp logo copy.png" alt="P&P logo" class="card-logo" />
 
       <h2 class="login-title">Log in</h2>
 
@@ -886,27 +851,26 @@
     </div>
   </section>
 
-  <!-- PANEL 7: LANGUAGE -->
+  <!-- PANEL 7 -->
   <section id="language" class="panel7">
     <div class="language-card">
-      <img src="assets/images/panel 7/yellow_paw.svg" alt="" class="paw paw-top-right" />
-      <img src="assets/images/panel 7/yellow_paw.svg" alt="" class="paw paw-bottom-left" />
-
-      <img src="assets/images/panel 7/pnp logo.png" alt="P&P logo" class="card-logo" />
+      <img src="./assets/images/panel 7/yellow_paw.svg" alt="" class="paw paw-top-right" />
+      <img src="./assets/images/panel 7/yellow_paw.svg" alt="" class="paw paw-bottom-left" />
+      <img src="./assets/images/panel 7/pnp logo.png" alt="P&P logo" class="card-logo" />
 
       <h2 class="language-title">Language</h2>
 
       <div class="language-options">
         <div class="language-option">
-          <img src="assets/images/panel 7/UK_flag.svg" alt="UK flag" />
+          <img src="./assets/images/panel 7/UK_flag.svg" alt="UK flag" />
           <span>English</span>
         </div>
         <div class="language-option">
-          <img src="assets/images/panel 7/CN_flag.svg" alt="China flag" />
+          <img src="./assets/images/panel 7/CN_flag.svg" alt="China flag" />
           <span>中文</span>
         </div>
         <div class="language-option">
-          <img src="assets/images/panel 7/JP_flag.svg" alt="Japan flag" />
+          <img src="./assets/images/panel 7/JP_flag.svg" alt="Japan flag" />
           <span>日本語</span>
         </div>
       </div>
