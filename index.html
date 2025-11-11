@@ -91,25 +91,26 @@
     .spacer{flex:1;}
 
     /* === Navbar Search Icon === */
+/* === Navbar Search Icon (Enlarged for Desktop) === */
 .nav-search {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;                     /* increased from 22px */
-  height: 42px;                    /* makes it circular and balanced */
-  background: rgba(255, 255, 255, 0.15); /* subtle circle background */
+  width: 54px;                     /* previously 42px */
+  height: 54px;                    /* keeps circular shape */
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   cursor: pointer;
-  margin-right: 18px;              /* spacing before SIGN IN bubble */
+  margin-right: 20px;
   transition: all 0.3s ease;
 }
 
 .nav-search img,
 .nav-search svg {
-  width: 60px;                     /* actual icon size */
-  height: 60px;
+  width: 32px;                     /* balanced within new 54px circle */
+  height: 32px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* ensures white/visible on brown navbar */
+  filter: brightness(0) invert(1);
   transition: transform 0.2s ease;
 }
 
@@ -119,7 +120,22 @@
 
 .nav-search:hover img,
 .nav-search:hover svg {
-  transform: scale(1.15);
+  transform: scale(1.1);
+}
+
+/* === Responsive adjustment === */
+@media (max-width: 900px) {
+  .nav-search {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+
+  .nav-search img,
+  .nav-search svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* === SIGN IN bubble (unchanged) === */
@@ -219,32 +235,44 @@
   background: var(--badge);
   border-radius: 32px;
   box-shadow: var(--shadow);
-  padding: 20px 18px;
+  padding: 24px 18px 20px;
   text-align: center;
   font-family: Poppins, sans-serif;
+
+  display: flex;                 /* align icon + text consistently */
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
 
 .ai-icon {
   width: 200px;                  /* larger for better visibility */
   height: 200px;
-  margin-bottom: 10px;
+  margin: 0;
   object-fit: contain;
 }
 
 .ai-badge .big {
   color: #ff7a1e;
   font-weight: 900;
-  font-size: 30px;              /* slightly larger for emphasis */
-  margin-bottom: 4px;
+  font-size: 30px;
+  margin: 0;
+}
+
+.ai-badge p,
+.ai-badge div {
+  margin: 0;
+  line-height: 1.25;
 }
 
 /* === Responsive scaling for smaller screens === */
 @media (max-width: 700px) {
   .ai-badge {
     width: 140px;
-    padding: 14px;
-    top: 100px;                 /* slightly lowered for balance on mobile */
+    padding: 16px 12px;
+    top: 100px;
     right: 20px;
+    gap: 10px;
   }
 
   .ai-icon {
