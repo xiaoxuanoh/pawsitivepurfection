@@ -202,31 +202,29 @@
     }
 
 /* === Hero Section Paw Icon === */
-/* === Hero Section Paw Icon (Final Adjusted Size + Spacing) === */
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;              /* tight space between paw and button */
+}
+
 .hero-paw {
-  width: 80px;                     /* enlarged from 56px for better visibility */
+  width: 80px;
   height: auto;
-  margin-right: 0px;               /* reduced spacing for closer alignment */
-  vertical-align: middle;
-  animation: wiggle 2.4s infinite ease-in-out;
+  margin: 0;
   transform-origin: center;
-  transition: transform 0.3s ease;
+  animation: pawWiggle 2.4s infinite ease-in-out;
 }
 
-.hero-paw:hover {
-  transform: scale(1.15) rotate(5deg); /* more lively hover effect */
-}
-
-/* Wiggle animation remains the same */
-@keyframes wiggle {
+@keyframes pawWiggle {
   0%, 100% {
-    transform: rotate(0deg);
+    transform: scale(1.5) rotate(0deg);
   }
   25% {
-    transform: rotate(-10deg);
+    transform: scale(1.5) rotate(-10deg);
   }
   75% {
-    transform: rotate(10deg);
+    transform: scale(1.5) rotate(10deg);
   }
 }
 
