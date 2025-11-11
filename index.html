@@ -201,16 +201,41 @@
       gap:14px;
     }
 
-    .hero-paw{
-      width:38px;
-      animation:wiggle 2.4s infinite ease-in-out;
-    }
+/* === Hero Section Paw Icon === */
+.hero-paw {
+  width: 56px;                     /* increased from 38px for visibility */
+  height: auto;
+  margin-right: 10px;              /* spacing before 'Get started' text */
+  vertical-align: middle;          /* ensures alignment with button text */
+  animation: wiggle 2.4s infinite ease-in-out;
+  transform-origin: center;        /* makes rotation look natural */
+  transition: transform 0.3s ease;
+}
 
-    @keyframes wiggle{
-      0%,100%{transform:rotate(0deg);}
-      25%{transform:rotate(-10deg);}
-      75%{transform:rotate(10deg);}
-    }
+.hero-paw:hover {
+  transform: scale(1.1) rotate(5deg); /* playful hover effect */
+}
+
+/* Wiggle animation (unchanged but cleaner) */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 700px) {
+  .hero-paw {
+    width: 40px;                   /* scales nicely for mobile */
+    margin-right: 6px;
+  }
+}
 
     .btn-primary{
       display:inline-flex;
