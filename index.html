@@ -90,27 +90,69 @@
 
     .spacer{flex:1;}
 
-    .nav-search{
-      width:22px;
-      margin-right:16px;
-      cursor:pointer;
-    }
+    /* === Navbar Search Icon === */
+.nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;                     /* increased from 22px */
+  height: 42px;                    /* makes it circular and balanced */
+  background: rgba(255, 255, 255, 0.15); /* subtle circle background */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 18px;              /* spacing before SIGN IN bubble */
+  transition: all 0.3s ease;
+}
 
-    .signin{
-      background:#ffa266;
-      color:#fff;
-      font-weight:800;
-      padding:10px 18px;
-      border-radius:14px;
-      box-shadow:var(--shadow);
-      font-family:Poppins,sans-serif;
-      font-size:14px;
-    }
+.nav-search img,
+.nav-search svg {
+  width: 24px;                     /* actual icon size */
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* ensures white/visible on brown navbar */
+  transition: transform 0.2s ease;
+}
 
-    @media(max-width:900px){
-      nav{display:none;}
-      .nav-search{margin-right:10px;}
-    }
+.nav-search:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-search:hover img,
+.nav-search:hover svg {
+  transform: scale(1.15);
+}
+
+/* === SIGN IN bubble (unchanged) === */
+.signin {
+  background: #ffa266;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+}
+
+/* === Responsive adjustment === */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .nav-search {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+  }
+
+  .nav-search img,
+  .nav-search svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 
     /* ---------- PANEL 1: HERO ---------- */
     .hero{
@@ -168,29 +210,53 @@
       font-size:18px;
     }
 
-    .ai-badge{
-      position:absolute;
-      top:120px;
-      right:40px;
-      width:160px;
-      background:var(--badge);
-      border-radius:40px;
-      box-shadow:var(--shadow);
-      padding:18px;
-      text-align:center;
-      font-family:Poppins,sans-serif;
-    }
+    /* === AI Customer Service Badge === */
+.ai-badge {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  width: 180px;                 /* slightly wider badge for balance */
+  background: var(--badge);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  padding: 20px 18px;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
 
-    .ai-icon{
-      width:48px;
-      margin-bottom:6px;
-    }
+.ai-icon {
+  width: 58px;                  /* larger for better visibility */
+  height: 58px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
 
-    .ai-badge .big{
-      color:#ff7a1e;
-      font-weight:900;
-      font-size:28px;
-    }
+.ai-badge .big {
+  color: #ff7a1e;
+  font-weight: 900;
+  font-size: 30px;              /* slightly larger for emphasis */
+  margin-bottom: 4px;
+}
+
+/* === Responsive scaling for smaller screens === */
+@media (max-width: 700px) {
+  .ai-badge {
+    width: 140px;
+    padding: 14px;
+    top: 100px;                 /* slightly lowered for balance on mobile */
+    right: 20px;
+  }
+
+  .ai-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ai-badge .big {
+    font-size: 22px;
+  }
+}
+
 
     .wave{
       position:absolute;
