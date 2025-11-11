@@ -202,21 +202,22 @@
     }
 
 /* === Hero Section Paw Icon === */
+/* === Hero Section Paw Icon (Final Adjusted Size + Spacing) === */
 .hero-paw {
-  width: 56px;                     /* increased from 38px for visibility */
+  width: 68px;                     /* enlarged from 56px for better visibility */
   height: auto;
-  margin-right: 10px;              /* spacing before 'Get started' text */
-  vertical-align: middle;          /* ensures alignment with button text */
+  margin-right: 4px;               /* reduced spacing for closer alignment */
+  vertical-align: middle;
   animation: wiggle 2.4s infinite ease-in-out;
-  transform-origin: center;        /* makes rotation look natural */
+  transform-origin: center;
   transition: transform 0.3s ease;
 }
 
 .hero-paw:hover {
-  transform: scale(1.1) rotate(5deg); /* playful hover effect */
+  transform: scale(1.15) rotate(5deg); /* more lively hover effect */
 }
 
-/* Wiggle animation (unchanged but cleaner) */
+/* Wiggle animation remains the same */
 @keyframes wiggle {
   0%, 100% {
     transform: rotate(0deg);
@@ -232,8 +233,8 @@
 /* Responsive adjustment for smaller screens */
 @media (max-width: 700px) {
   .hero-paw {
-    width: 40px;                   /* scales nicely for mobile */
-    margin-right: 6px;
+    width: 48px;                   /* scales appropriately for mobile */
+    margin-right: 3px;
   }
 }
 
