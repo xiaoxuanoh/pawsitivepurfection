@@ -434,6 +434,54 @@
     text-decoration: underline;
   }
 
+  /* PANEL 3 FONT CUSTOMIZATION */
+.panel3-title {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  font-size: 52px;  /* adjust as needed */
+  color: #3a2a22;
+}
+
+.panel3-text {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+  font-size: 22px; /* adjust as needed */
+  color: #352117;
+  margin-top: 10px;
+}
+
+/* === Panel 3 Down Arrows === */
+.panel3-arrows {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.arrow-down {
+  font-size: 32px;
+  line-height: 1;
+  color: #3a2a22;              /* dark brown to match text */
+  animation: arrowPulse 1.3s infinite ease-in-out;
+}
+
+/* make the second arrow slightly delayed so they don't pulse in sync */
+.panel3-arrows .arrow-down:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes arrowPulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(6px) scale(1.2);  /* moves down + enlarges */
+    opacity: 1;
+  }
+}
+
+
   /* ---------- CTA SECTION (between video and footer) ---------- */
 .cta-section{
   background:#fef7ec;          /* same light background as page */
@@ -918,6 +966,12 @@
       How to use our app?
     </p>
 
+    <!-- animated down arrows -->
+    <div class="panel3-arrows">
+      <span class="arrow-down">↓</span>
+      <span class="arrow-down">↓</span>
+    </div>
+
     <!-- ⬇️ INSERT YOUR VIDEO HERE -->
     <div class="panel3-video">
       <iframe 
@@ -935,7 +989,7 @@
 <section class="cta-section">
   <div class="cta-card">
     <p class="cta-line strong">Interested to know more about our app?</p>
-    <p class="cta-line">Click the link to experience our app’s test version!</p>
+    <p class="cta-line">Click the link to try out our app’s test version!</p>
     <p class="cta-line">
       <a href="https://purrfect-sau18596.softr.app/" target="_blank" rel="noopener noreferrer">
         https://purrfect-sau18596.softr.app/
