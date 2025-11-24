@@ -434,6 +434,51 @@
     text-decoration: underline;
   }
 
+  /* ---------- CTA SECTION (between video and footer) ---------- */
+.cta-section{
+  background:#fef7ec;          /* same light background as page */
+  padding:48px 16px 60px;
+}
+
+.cta-card{
+  max-width:900px;
+  margin:0 auto;
+  background:#fbe7c7;          /* same cream as bottom design */
+  border-radius:52px;
+  box-shadow:0 15px 40px rgba(0,0,0,.22);
+  padding:40px 64px;
+  text-align:center;
+  font-family:Poppins,sans-serif;
+  line-height:1.6;
+}
+
+.cta-line{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.cta-line.strong{
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.cta-card a{
+  font-weight:700;
+  color:#c86828;
+  text-decoration:underline;
+}
+
+/* responsive tweak */
+@media (max-width:768px){
+  .cta-card{
+    padding:26px 20px 30px;
+    border-radius:32px;
+  }
+  .cta-line{
+    font-size:16px;
+  }
+}
+
 
     /* ---------- PANEL 4 (FOOTER + CTA) ---------- */
     .panel4{
@@ -896,22 +941,24 @@
   </div>
 </section>
 
+<!-- CTA: Interested to know more (single centered card) -->
+<section class="cta-section">
+  <div class="cta-card">
+    <p class="cta-line strong">Interested to know more about our app?</p>
+    <p class="cta-line">Click the link to experience our app’s test version!</p>
+    <p class="cta-line">
+      <a href="https://purrfect-sau18596.softr.app/" target="_blank" rel="noopener noreferrer">
+        https://purrfect-sau18596.softr.app/
+      </a>
+    </p>
+  </div>
+</section>
+
 
   <!-- PANEL 4: CTA + FOOTER -->
   <section id="panel4" class="panel4">
     <div class="panel4-band">
       <div class="panel4-inner">
-
-        <div class="panel4-cta">
-          <div class="panel4-cta-box">
-            <p>Interested to know more about our app?</p>
-            <p>Click the link to experience our app’s test version!</p>
-            <a href="https://purrfect-sau18596.softr.app/" target="_blank" rel="noopener">
-              https://purrfect-sau18596.softr.app/
-            </a>
-          </div>
-        </div>
-
         <div class="panel4-cols">
           <div>
             <h3 class="panel4-title">SERVICE INDUSTRY</h3>
