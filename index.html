@@ -413,6 +413,28 @@
       display:block;
     }
 
+    /* === White CTA Box under video === */
+  .panel3-cta-box {
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 26px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    color: #4b341f;
+    max-width: 900px;
+  }
+
+  .panel3-cta-box a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #dd6c1f;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+
     /* ---------- PANEL 4 (FOOTER + CTA) ---------- */
     .panel4{
       background:#ffffff;
@@ -840,18 +862,40 @@
   </section>
 
   <!-- PANEL 3: HOW TO USE OUR APP -->
-  <section id="panel3" class="panel3">
-    <div class="panel3-inner">
-      <h2 class="panel3-title">How to use our app</h2>
-      <div class="panel3-video-wrapper">
-        <video controls>
-          <!-- TODO: replace src with your actual video file path if different -->
-          <source src="./assets/images/panel 3/video ver 2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+<!-- PANEL 3 -->
+<section id="panel3" class="panel3">
+  <div class="panel3-overlay"></div>
+
+  <div class="panel3-inner">
+    <h2 class="panel3-title">For better experience</h2>
+    <p class="panel3-text">
+      3-click global pet mall,<br>
+      5-day door-to-door, zero fake
+    </p>
+
+    <!-- ⬇️ INSERT YOUR VIDEO HERE -->
+    <div class="panel3-video">
+      <iframe 
+          width="100%" 
+          height="480" 
+          src="./assets/images/panel 3/video ver 2.mp4" type="video/mp4"
+          frameborder="0"
+          allowfullscreen>
+      </iframe>
     </div>
-  </section>
+
+    <!-- ⬇️ WHITE BOX CTA (NOW UNDER THE VIDEO) -->
+    <div class="panel3-cta-box">
+      <p><strong>Interested to know more about our app?</strong></p>
+      <p>Click the link to experience our app’s test version!</p>
+      <a href="https://purrfect-sau18596.softr.app/" target="_blank">
+        https://purrfect-sau18596.softr.app/
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- PANEL 4: CTA + FOOTER -->
   <section id="panel4" class="panel4">
