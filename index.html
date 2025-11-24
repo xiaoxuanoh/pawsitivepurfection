@@ -150,13 +150,14 @@
       margin:0 auto;
     }
 
-    .hero-title{
+    .hero-title {
       margin:0 0 18px;
       font-size:clamp(40px,6.4vw,86px);
       line-height:1.05;
-      color:var(--dark);
+      color:#835633;   /* new warm brown */
       text-shadow:0 6px 24px rgba(0,0,0,.25);
     }
+
 
     .hero-cta{
       display:flex;
@@ -387,14 +388,25 @@
       text-align:center;
     }
 
+    /* main heading */
     .panel3-title{
-      font-family:Poppins,sans-serif;
-      font-size:clamp(24px,3vw,32px);
+      font-family:"Poppins",sans-serif !important;
       font-weight:700;
-      margin:0 0 30px;
+      font-size:52px;
       color:#3a2a22;
+      margin:0 0 18px;          /* small gap above sub-text */
     }
 
+    /* sub-text: “What does our app contain…?” */
+    .panel3-text {
+      font-family:"Poppins", sans-serif !important;
+      font-weight:400;
+      font-size:22px;
+      color:#352117;
+      margin:0;
+    }
+
+    /* video frame */
     .panel3-video-wrapper{
       width:100%;
       max-width:900px;
@@ -414,72 +426,71 @@
     }
 
     /* === White CTA Box under video === */
-  .panel3-cta-box {
-    margin-top: 30px;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 26px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    text-align: center;
-    font-family: Poppins, sans-serif;
-    color: #4b341f;
-    max-width: 900px;
+    .panel3-cta-box {
+      margin:30px auto 0;        /* center horizontally under video */
+      background:#ffffff;
+      padding:30px;
+      border-radius:26px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      text-align:center;
+      font-family:Poppins, sans-serif;
+      color:#4b341f;
+      max-width:900px;
+    }
+
+    .panel3-cta-box a {
+      display:inline-block;
+      margin-top:8px;
+      color:#dd6c1f;
+      font-weight:700;
+      text-decoration:underline;
   }
 
-  .panel3-cta-box a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #dd6c1f;
-    font-weight: 700;
-    text-decoration: underline;
-  }
+    /* === Panel 3 Down Arrows (bigger + thicker, with extra spacing) === */
+    .panel3-arrows {
+      margin-top:22px;
+      margin-bottom:32px;        /* space between arrows and video */
+      display:flex;
+      justify-content:center;
+      gap:24px;
+    }
 
-  /* PANEL 3 FONT CUSTOMIZATION */
-.panel3-title {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 700;
-  font-size: 52px;  /* adjust as needed */
-  color: #3a2a22;
-}
+    /* each arrow container */
+    .arrow-down {
+      position:relative;
+      width:34px;
+      height:50px;
+      font-size:0;               /* hide any “↓” text inside */
+    }
 
-.panel3-text {
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 400;
-  font-size: 22px; /* adjust as needed */
-  color: #352117;
-  margin-top: 10px;
-}
+    /* draw the arrow with borders so it’s thick */
+    .arrow-down::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      border-left:4px solid #3a2a22;
+      border-bottom:4px solid #3a2a22;
+      transform:rotate(45deg) translateY(0) scale(1);
+      transform-origin:center;
+      opacity:0.9;
+      animation:arrowPulse 1.3s infinite ease-in-out;
+    }
 
-/* === Panel 3 Down Arrows === */
-.panel3-arrows {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
+    /* delay second arrow so they don’t move in sync */
+    .panel3-arrows .arrow-down:nth-child(2)::before {
+      animation-delay:0.18s;
+    }
 
-.arrow-down {
-  font-size: 32px;
-  line-height: 1;
-  color: #3a2a22;              /* dark brown to match text */
-  animation: arrowPulse 1.3s infinite ease-in-out;
-}
-
-/* make the second arrow slightly delayed so they don't pulse in sync */
-.panel3-arrows .arrow-down:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-@keyframes arrowPulse {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translateY(6px) scale(1.2);  /* moves down + enlarges */
-    opacity: 1;
-  }
-}
+    @keyframes arrowPulse {
+      0%, 100% {
+        transform:rotate(45deg) translateY(0) scale(1);
+        opacity:0.9;
+      }
+      50% {
+        transform:rotate(45deg) translateY(10px) scale(1.15);  /* bounces down but stays clear of video */
+        opacity:1;
+      }
+    }
 
 
   /* ---------- CTA SECTION (between video and footer) ---------- */
